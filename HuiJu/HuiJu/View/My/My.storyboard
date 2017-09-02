@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2NY-8H-Ody">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2NY-8H-Ody">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--我的-->
         <scene sceneID="eLL-y2-KE8">
             <objects>
-                <viewController id="eMb-cf-IeH" sceneMemberID="viewController">
+                <viewController id="eMb-cf-IeH" customClass="MyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Fv-4d-spv"/>
                         <viewControllerLayoutGuide type="bottom" id="tmr-mW-PFI"/>
@@ -20,9 +19,37 @@
                     <view key="view" contentMode="scaleToFill" id="e2U-WR-nib">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugs-2j-icU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aiI-Rg-ipW">
+                                        <rect key="frame" x="142.5" y="70" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="TUD-0p-2hn"/>
+                                            <constraint firstAttribute="height" constant="90" id="iKz-U3-Nsf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.cornerR " value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="aiI-Rg-ipW" firstAttribute="centerY" secondItem="ugs-2j-icU" secondAttribute="centerY" constant="15" id="5Wj-n5-gg6"/>
+                                    <constraint firstAttribute="height" constant="200" id="8Im-sn-x7Z"/>
+                                    <constraint firstItem="aiI-Rg-ipW" firstAttribute="centerX" secondItem="ugs-2j-icU" secondAttribute="centerX" id="YcG-HV-WpG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ugs-2j-icU" firstAttribute="leading" secondItem="e2U-WR-nib" secondAttribute="leading" id="5hM-DL-FtX"/>
+                            <constraint firstAttribute="trailing" secondItem="ugs-2j-icU" secondAttribute="trailing" id="T98-aE-beh"/>
+                            <constraint firstItem="ugs-2j-icU" firstAttribute="top" secondItem="e2U-WR-nib" secondAttribute="top" id="em2-d4-UDD"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AJT-J3-buI"/>
+                    <navigationItem key="navigationItem" title="我的" id="AJT-J3-buI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eV-Op-X0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
